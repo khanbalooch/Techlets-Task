@@ -2,26 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
+## Requirements
+Develop a functional web application using MEAN stack having following features .
+1. User login and authentication flow. (please use mongodb and node.js for backend).
+2. The system should populate database with some dummy users so it can be easily tested by us.
+3. On the front-end use angular to take two inputs from users using drop-downs and the values of both drop downs should be from 10 -100.
+4. Generate two strings  with sizes given by the values of above drop downs selected. Display these string on front end.
+5. Also display a button labelled as "Find". On clicking this button find the longest common sub sequence between two strings and display it on the screen.
+6. Clicking the find button save both strings as well as longest common sub sequence in the database.
+7. If a user saves the sub-sequence that sub sequence should be displayed on the screen even if user logs out and logs in again.
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. Ths command start back-end and front-end . Front End Url : https://127.0.0.1:4200    Back ENd Url : http://127.0.0.1:8081
 
-## Code scaffolding
+## Completion of Project
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The Poject is 99 % complete

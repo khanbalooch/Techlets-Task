@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+          <button class="btn btn-primary" (click)="doLogout()">Logout</button>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <label class="col-form-label">Select First Number</label>
+    </div>
+    <div class="col-md-6">
+        <label class="col-form-label">Select Second Number</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+    <select class="custom-select-lg" [(ngModel)]='number1' required  (ngModelChange)='setString1()' >
+        <option *ngFor="let num of list" [value]='num' >{{num}}</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+        <select class="custom-select-lg" [(ngModel)]='number2' required  (ngModelChange)='setString2()' >
+          <option *ngFor="let num of list" [value]='num' >{{num}}</option>
+        </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <label class="col-form-label-sm">{{strings.string1}}</label>
+    </div>
+    <div class="col-md-6">
+      <label class="col-form-label-sm">{{strings.string2}}</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <button class="btn btn-outline-secondary" (click)='findLCS()' >Find</button>
+    </div>
+    <div class="col-md-6">
+      <label class="col-form-label-sm">LCS: {{strings.lcs}}</label>
+    </div>
+  </div>
+  <div class="row">
+    
+    <h1>Previous Record</h1>
+    {{prerec}}
+    
+  </div>
+</div>
+<!---<ul>                    //Previous records needs to be shown using ngFor
+      <li *ngFor="let item of previousRecord">{{item.lcs}}</li>
+    </ul>-->

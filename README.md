@@ -14,6 +14,10 @@ Develop a functional web application using MEAN stack having following features 
 ## Development server
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. Ths command start back-end and front-end . Front End Url : https://127.0.0.1:4200    Back ENd Url : http://127.0.0.1:8081
+## Test User
+As an when npm start command is given in project directory the  application will populate the mongodb with a test user. The Credentials of test user are given below
+Email : test@gmail.com
+Password: test
 
 ## Completion of Project
 

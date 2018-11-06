@@ -21,4 +21,18 @@ Password: test
 
 ## Completion of Project
 
-The Poject is 99 % complete
+The Poject is 99 % complete. Requirements wise sub tasks and their completion is listed below 
+1. User login and authentication flow. (please use mongodb and node.js for backend).  
+## done subtask 1
+2. The system should populate database with some dummy users so it can be easily tested by us.
+## done subtask 2
+3. On the front-end use angular to take two inputs from users using drop-downs and the values of both drop downs should be from 10 -100.
+## done s
+4. Generate two strings  with sizes given by the values of above drop downs selected. Display these string on front end.
+## done
+5. Also display a button labelled as "Find". On clicking this button find the longest common sub sequence between two strings and display it on the screen.
+## done
+6. Clicking the find button save both strings as well as longest common sub sequence in the database.
+## done
+7. If a user saves the sub-sequence that sub sequence should be displayed on the screen even if user logs out and logs in again.
+## done. all the saved Longest Common subsequences saved in mongo db associated with logged In user fetched/retrieved. The data is displayed is browser developer console. The displaying of of the retrieved data on front end angular using *ngFor Directive remain to be done 

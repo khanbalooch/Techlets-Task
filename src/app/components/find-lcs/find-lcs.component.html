@@ -41,12 +41,13 @@
     </div>
   </div>
   <div class="row">
-    
+
     <h1>Previous Record</h1>
-    {{prerec}}
-    
+    <!-- {{prerec}} -->
+    <ul>
+      <div *ngFor="let item of previousRecord | async">
+          <li > {{item.lcs}}</li>
+      </div>
+    </ul>
   </div>
 </div>
-<!---<ul>                    //Previous records needs to be shown using ngFor
-      <li *ngFor="let item of previousRecord">{{item.lcs}}</li>
-    </ul>-->

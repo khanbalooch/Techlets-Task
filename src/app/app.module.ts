@@ -1,3 +1,4 @@
+import { LcsService } from './services/lcs.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,7 +21,7 @@ import { FindLcsComponent } from './components/find-lcs/find-lcs.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [LcsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { LcsService } from './../../services/lcs.service';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router} from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-find-lcs',
@@ -10,7 +12,15 @@ import { Router} from '@angular/router';
 export class FindLcsComponent implements OnInit {
 
   list: number[] = [];
-  previousRecord: any[] = [];
+  previousRecord: Observable<any>;
+  // [
+  //   {
+  //     lcs: 'test1'
+  //   },
+  //   {
+  //     lcs: 'test2'
+  //   }
+  // ];
   prerec =  'Note: The Only Work remaining is to show the fetched data here(using *ngFor). Data is fetched from Mongodb and shown in browser console';
   number1: any;
   number2: any;
@@ -20,24 +30,23 @@ export class FindLcsComponent implements OnInit {
     headers: new HttpHeaders({ 'Authorization': localStorage.getItem('jwt') })
   };
 
-  constructor(private http: HttpClient, private router: Router) {}
-
+  constructor(private http: HttpClient, private router: Router, private lcsService: LcsService) {}
   ngOnInit() {
+    this.previousRecord = this.lcsService.getAllLCS();
+    // .subscribe(
+    //   data =>  {
+    //     this.previousRecord = data;
+    //     console.log(this.previousRecord);
+    //   },
+    //   error => console.log(error)
+    // );
+
+
     for (let i = 10; i < 101; i++) { // Initialize the array from 10-100
       this.list.push(i);
     }
 
-    this.http.get('http://127.0.0.1:8081/getlcs/' + localStorage.getItem('user_id'), this.httpOptions).subscribe(
-      function(data) {
 
-        this.previousRecord = data['lcs'];
-        this.prerec = JSON.stringify(this.previousRecord);
-        console.log(JSON.stringify(this.previousRecord));
-    },
-      function(error) {
-          console.log(error);
-    }
-    );
   }
   randomString(strlen: number) {
 
